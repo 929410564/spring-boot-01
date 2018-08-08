@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:text="${hello}">这显示欢迎信息</div>  <!--转义 -->
+<div th:utext="${hello}"></div>              <!--不转义 -->
+<hr>
+<div th:text="${a}" th:each="a:${arrays}"></div>  <!-- 循环出来3个div  -->
+<hr>
+<div th:each="a:${arrays}">[[${a}]]</div>    <!-- 循环出来3个div  另一种写法-->
+</body>
+</html>
